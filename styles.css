@@ -55,7 +55,9 @@ header p {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     overflow: hidden;
-    height: 120vh;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 800px;
     display: flex;
     flex-direction: column;
 }
@@ -306,48 +308,6 @@ header p {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    .chat-container {
-        height: 60vh;
-    }
-    
-    .topics {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .topics {
-        grid-template-columns: 1fr;
-    }
-    
-    .message {
-        max-width: 90%;
-        font-size: 0.9rem;
-    }
-    
-    .quick-replies {
-        padding: 10px;
-    }
-    
-    .quick-reply {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-    
-    .chat-container {
-        height: 70vh;
-    }
-}
-
 /* Code block styling */
 pre {
     background: #f5f5f5;
@@ -392,4 +352,165 @@ th {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .chat-container {
+        height: 65vh;
+    }
+    
+    .topics {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .chat-header {
+        padding: 12px 15px;
+    }
+    
+    .chat-header img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .chat-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .chat-messages {
+        padding: 15px;
+    }
+    
+    .message {
+        max-width: 90%;
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .quick-replies {
+        padding: 8px 10px;
+    }
+    
+    .quick-reply {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        margin: 3px;
+    }
+    
+    .chat-input {
+        padding: 12px;
+    }
+    
+    .chat-input input {
+        padding: 10px 15px;
+    }
+    
+    .chat-input button {
+        padding: 0 18px;
+    }
+    
+    .knowledge-base {
+        padding: 15px;
+    }
+    
+    .topics {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .topic {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 0;
+        border-radius: 0;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
+    
+    .chat-header {
+        padding: 10px 12px;
+    }
+    
+    .chat-header img {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+    }
+    
+    .status {
+        font-size: 0.8rem;
+    }
+    
+    .status-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .message {
+        max-width: 95%;
+        font-size: 0.85rem;
+    }
+    
+    .message-time {
+        font-size: 0.65rem;
+    }
+    
+    .chat-input input {
+        font-size: 0.9rem;
+    }
+    
+    .topics {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 900px) {
+    .chat-container {
+        height: 60vh;
+        min-height: 300px;
+    }
+}
+
+/* Very large screens */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Prevent zooming on mobile input focus */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+        font-size: 16px;
+    }
 }
