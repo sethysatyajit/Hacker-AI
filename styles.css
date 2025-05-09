@@ -23,7 +23,8 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     flex: 1;
@@ -32,22 +33,23 @@ body {
 header {
     background: var(--primary);
     color: white;
-    padding: 25px 0;
+    padding: 20px 0;
     text-align: center;
     border-radius: 0 0 15px 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
     letter-spacing: 1px;
 }
 
 header p {
     opacity: 0.9;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .chat-container {
@@ -55,47 +57,49 @@ header p {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     overflow: hidden;
-    height: 70vh;
-    min-height: 400px;
+    height: 110vh;
+    min-height: 550px;
     max-height: 800px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .chat-header {
     background: var(--secondary);
     color: white;
-    padding: 15px 20px;
+    padding: 12px 15px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
 }
 
 .chat-header img {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 12px;
     border: 2px solid white;
 }
 
 .chat-header h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .status {
     margin-left: auto;
     display: flex;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .status-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #2ecc71;
     border-radius: 50%;
-    margin-right: 8px;
+    margin-right: 6px;
     animation: pulse 1.5s infinite;
 }
 
@@ -106,17 +110,18 @@ header p {
 
 .chat-messages {
     flex: 1;
-    padding: 20px;
+    padding: 15px;
     overflow-y: auto;
     background: #f9f9f9;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .message {
-    margin-bottom: 15px;
-    max-width: 85%;
-    padding: 12px 16px;
+    margin-bottom: 12px;
+    max-width: 90%;
+    padding: 12px 15px;
     border-radius: 18px;
     line-height: 1.5;
     position: relative;
@@ -146,28 +151,30 @@ header p {
 }
 
 .message-time {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     opacity: 0.7;
-    margin-top: 6px;
+    margin-top: 5px;
     display: block;
     text-align: right;
 }
 
 .chat-input {
     display: flex;
-    padding: 15px;
+    padding: 12px;
     background: white;
     border-top: 1px solid #eee;
+    width: 100%;
 }
 
 .chat-input input {
     flex: 1;
-    padding: 12px 18px;
+    padding: 12px 16px;
     border: 1px solid #ddd;
     border-radius: 30px;
     outline: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: all 0.3s;
+    width: 100%;
 }
 
 .chat-input input:focus {
@@ -180,11 +187,13 @@ header p {
     color: white;
     border: none;
     border-radius: 30px;
-    padding: 0 22px;
-    margin-left: 12px;
+    padding: 0 20px;
+    margin-left: 10px;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.2s;
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .chat-input button:hover {
@@ -194,17 +203,18 @@ header p {
 .quick-replies {
     display: flex;
     flex-wrap: wrap;
-    padding: 12px 15px;
+    padding: 10px 12px;
     background: #f1f3f5;
     border-top: 1px solid #ddd;
+    width: 100%;
 }
 
 .quick-reply {
     background: white;
     border: 1px solid #ddd;
     border-radius: 20px;
-    padding: 8px 16px;
-    margin: 5px;
+    padding: 8px 14px;
+    margin: 4px;
     font-size: 0.85rem;
     cursor: pointer;
     transition: all 0.2s;
@@ -219,11 +229,11 @@ header p {
 
 .typing-indicator {
     display: flex;
-    padding: 12px 16px;
+    padding: 12px 15px;
     background: white;
     border-radius: 18px;
     align-self: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     border: 1px solid #eee;
 }
 
@@ -232,7 +242,7 @@ header p {
     height: 8px;
     background: #7f8c8d;
     border-radius: 50%;
-    margin: 0 4px;
+    margin: 0 3px;
     animation: typingAnimation 1.4s infinite ease-in-out;
 }
 
@@ -246,34 +256,36 @@ header p {
 .typing-dot:nth-child(3) { animation-delay: 0.4s; }
 
 .knowledge-base {
-    margin-top: 30px;
+    margin-top: 25px;
     background: white;
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 100%;
 }
 
 .knowledge-base h3 {
     color: var(--primary);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
 }
 
 .topics {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    width: 100%;
 }
 
 .topic {
     background: #f8f9fa;
-    padding: 15px;
+    padding: 12px;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
     border: 1px solid #eee;
-    height: 100%;
 }
 
 .topic:hover {
@@ -284,23 +296,24 @@ header p {
 
 .topic h4 {
     color: var(--secondary);
-    margin-bottom: 8px;
-    font-size: 1.05rem;
+    margin-bottom: 6px;
+    font-size: 1rem;
 }
 
 .topic p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #666;
 }
 
 .footer {
     text-align: center;
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 30px;
+    padding: 15px;
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     background: white;
     border-top: 1px solid #eee;
+    width: 100%;
 }
 
 .footer a {
@@ -314,9 +327,10 @@ pre {
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
-    margin: 10px 0;
+    margin: 8px 0;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.85rem;
+    width: 100%;
 }
 
 code {
@@ -331,8 +345,8 @@ code {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
-    font-size: 0.9rem;
+    margin: 8px 0;
+    font-size: 0.85rem;
 }
 
 table, th, td {
@@ -354,100 +368,39 @@ img {
     height: auto;
 }
 
-/* Responsive Adjustments */
+/* ==================== */
+/* RESPONSIVE ADJUSTMENTS */
+/* ==================== */
+
+/* Large tablets and small laptops (1024px and below) */
 @media (max-width: 1024px) {
     .chat-container {
-        height: 65vh;
+        height: 75vh;
+        min-height: 500px;
     }
     
     .topics {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
 }
 
+/* Tablets (768px and below) */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
     }
     
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    header p {
-        font-size: 1rem;
-    }
-    
-    .chat-header {
-        padding: 12px 15px;
-    }
-    
-    .chat-header img {
-        width: 36px;
-        height: 36px;
-    }
-    
-    .chat-header h2 {
-        font-size: 1.1rem;
-    }
-    
-    .chat-messages {
-        padding: 15px;
-    }
-    
-    .message {
-        max-width: 90%;
-        padding: 10px 14px;
-        font-size: 0.9rem;
-    }
-    
-    .quick-replies {
-        padding: 8px 10px;
-    }
-    
-    .quick-reply {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-        margin: 3px;
-    }
-    
-    .chat-input {
-        padding: 12px;
-    }
-    
-    .chat-input input {
-        padding: 10px 15px;
-    }
-    
-    .chat-input button {
-        padding: 0 18px;
-    }
-    
-    .knowledge-base {
-        padding: 15px;
-    }
-    
-    .topics {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .topic {
-        padding: 12px;
-    }
-}
-
-@media (max-width: 480px) {
     header {
-        padding: 20px 0;
-        border-radius: 0;
+        padding: 15px 0;
     }
     
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
-    header p {
-        font-size: 0.9rem;
+    .chat-container {
+        height: 78vh;
+        min-height: 450px;
     }
     
     .chat-header {
@@ -455,31 +408,78 @@ img {
     }
     
     .chat-header img {
-        width: 32px;
-        height: 32px;
-        margin-right: 10px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .chat-messages {
+        padding: 12px;
+    }
+    
+    .message {
+        max-width: 92%;
+        padding: 10px 14px;
+    }
+    
+    .quick-replies {
+        padding: 8px 10px;
+    }
+    
+    .quick-reply {
+        padding: 7px 12px;
+    }
+    
+    .chat-input {
+        padding: 10px;
+    }
+    
+    .knowledge-base {
+        margin-top: 20px;
+        padding: 12px;
+    }
+    
+    .topics {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+    header {
+        padding: 12px 0;
+        border-radius: 0;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .chat-container {
+        height: 90vh;
+        min-height: 620px;
+        border-radius: 8px;
+    }
+    
+    .chat-header h2 {
+        font-size: 1.1rem;
     }
     
     .status {
         font-size: 0.8rem;
     }
     
-    .status-dot {
-        width: 8px;
-        height: 8px;
-    }
-    
     .message {
         max-width: 95%;
-        font-size: 0.85rem;
-    }
-    
-    .message-time {
-        font-size: 0.65rem;
+        font-size: 0.9rem;
     }
     
     .chat-input input {
-        font-size: 0.9rem;
+        padding: 10px 14px;
+    }
+    
+    .chat-input button {
+        padding: 0 16px;
     }
     
     .topics {
@@ -487,22 +487,36 @@ img {
     }
     
     .footer {
-        padding: 15px;
+        padding: 12px;
         font-size: 0.8rem;
     }
 }
 
+/* Mobile landscape (900px width and below in landscape) */
 @media screen and (orientation: landscape) and (max-width: 900px) {
     .chat-container {
-        height: 60vh;
+        height: 80vh;
         min-height: 300px;
+    }
+    
+    header {
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    
+    .knowledge-base {
+        margin-top: 15px;
     }
 }
 
-/* Very large screens */
+/* Very large screens (1600px and above) */
 @media (min-width: 1600px) {
     .container {
         max-width: 1400px;
+    }
+    
+    .chat-container {
+        max-height: 850px;
     }
 }
 
@@ -512,5 +526,27 @@ img {
     textarea:focus,
     input:focus {
         font-size: 16px;
+    }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+    .chat-container {
+        height: 85vh;
+        min-height: 350px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .message {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .quick-reply {
+        padding: 6px 10px;
+        font-size: 0.8rem;
     }
 }
