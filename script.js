@@ -272,6 +272,45 @@ Linux Configuration:
    }
 3. Start service: systemctl start dhcpd`,
         related: ["network security", "linux administration"]
+    },
+    "nmap": {
+        definition: `🔥 Nmap (Network Mapper) - Ultimate Command Cheat Sheet
+
+🔹 BASIC SCANS
+\`nmap <target>\` → Scan top 1000 TCP ports
+\`nmap -p- <target>\` → Scan ALL 65,535 ports
+\`nmap -p 22,80,443 <target>\` → Scan specific ports
+\`nmap -sn 192.168.1.0/24\` → Ping sweep (no port scan)
+
+🔹 SCAN TECHNIQUES
+\`nmap -sS <target>\` → Stealth SYN scan (default)
+\`nmap -sT <target>\` → TCP connect scan
+\`nmap -sU <target>\` → UDP port scan
+\`nmap -sA <target>\` → TCP ACK scan (firewall test)
+
+🔹 SERVICE DETECTION
+\`nmap -sV <target>\` → Service version detection
+\`nmap -O <target>\` → OS fingerprinting
+\`nmap -A <target>\` → Aggressive scan (OS+services+traceroute)
+
+🔹 SCRIPTING ENGINE
+\`nmap --script=vuln <target>\` → Vulnerability scan
+\`nmap --script=http-title <target>\` → Get webpage titles
+\`nmap --script=ssl-enum-ciphers <target>\` → Check SSL ciphers
+
+🔹 FIREWALL EVASION
+\`nmap -f <target>\` → Fragment packets
+\`nmap -D RND:10 <target>\` → Decoy scan (hide among fake IPs)
+\`nmap --source-port 53 <target>\` → Spoof source port
+\`nmap --data-length 100 <target>\` → Add random data
+
+🔹 OUTPUT FORMATS
+\`nmap -oN scan.txt <target>\` → Normal output
+\`nmap -oX scan.xml <target>\` → XML format
+\`nmap -oG scan.gnmap <target>\` → Grepable format
+
+⚠ LEGAL NOTE: Only scan networks you own or have permission to test!`,
+        related: ["ethical hacking", "network security", "phases of hacking"]
     }
 };
 
@@ -328,6 +367,7 @@ function processInput(input) {
 - Cryptography (encryption methods)
 - AWS Security (IAM, best practices)
 - Windows Security (SAM file, password cracking)
+- Nmap (port scanning techniques)
 
 Try asking about any of these topics or use the quick replies below!`;
     }
@@ -351,6 +391,7 @@ Try asking about any of these topics or use the quick replies below!`;
 - Cryptographic algorithms
 - AWS security best practices
 - Windows security (SAM file)
+- Nmap scanning commands
 
 Or type 'help' for more options.`;
 }
