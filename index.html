@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker AI - Cyber Security Assistant</title>
+    <meta name="description" content="AI-powered Cyber Security assistant created by Satyajit Sethy to help security professionals with security concepts, tools, and best practices.">
+    <meta name="author" content="Satyajit Sethy">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.jpg" type="image/jpg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hacker AI</h1>
+            <p>Your intelligent Cyber Security assistant</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="logo.jpg" alt="CyberSec AI Avatar">
+                <h2>Hacker AI</h2>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span>Online</span>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    Hello! I'm Hacker AI, created by Satyajit Sethy to assist with Cyber Security topics.
+                    <span class="message-time">Just now</span>
+                </div>
+                
+                <div class="message bot-message">
+                    I can help with:
+                    <ul style="margin-top: 8px; margin-left: 20px;">
+                        <li>Information Security Fundamentals</li>
+                        <li>Linux Administration</li>
+                        <li>Network Security</li>
+                        <li>Ethical Hacking Techniques</li>
+                        <li>Cryptography Methods</li>
+                        <li>Cloud Security (AWS)</li>
+                    </ul>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+            
+            <div class="quick-replies" id="quick-replies">
+                <div class="quick-reply" onclick="sendQuickReply('What is ethical hacking?')">Ethical Hacking</div>
+                <div class="quick-reply" onclick="sendQuickReply('Explain Linux permissions')">Linux Permissions</div>
+                <div class="quick-reply" onclick="sendQuickReply('Explain IP address classes')">IP Classes</div>
+                <div class="quick-reply" onclick="sendQuickReply('What is cryptography?')">Cryptography</div>
+                <div class="quick-reply" onclick="sendQuickReply('AWS security best practices')">AWS Security</div>
+                <div class="quick-reply" onclick="sendQuickReply('Linux commands for security')">Linux Commands</div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Ask about cybersecurity..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        
+        <div class="knowledge-base">
+            <h3>Cybersecurity Knowledge Base</h3>
+            <div class="topics">
+                <div class="topic" onclick="sendQuickReply('Explain information security')">
+                    <h4>Info Security</h4>
+                    <p>Fundamentals of cybersecurity</p>
+                </div>
+                <div class="topic" onclick="sendQuickReply('Linux commands guide')">
+                    <h4>Linux Commands</h4>
+                    <p>Essential administration commands</p>
+                </div>
+                <div class="topic" onclick="sendQuickReply('Network devices explained')">
+                    <h4>Networking</h4>
+                    <p>Routers, switches, firewalls</p>
+                </div>
+                <div class="topic" onclick="sendQuickReply('Phases of hacking')">
+                    <h4>Ethical Hacking</h4>
+                    <p>Penetration testing phases</p>
+                </div>
+                <div class="topic" onclick="sendQuickReply('Cryptography algorithms')">
+                    <h4>Cryptography</h4>
+                    <p>Encryption techniques</p>
+                </div>
+                <div class="topic" onclick="sendQuickReply('AWS IAM security')">
+                    <h4>AWS Security</h4>
+                    <p>Cloud security services</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Hacker AI | Created by Satyajit Sethy | &copy; 2025 All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
