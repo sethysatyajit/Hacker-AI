@@ -311,6 +311,53 @@ Linux Configuration:
 
 ⚠ LEGAL NOTE: Only scan networks you own or have permission to test!`,
         related: ["ethical hacking", "network security", "phases of hacking"]
+    },
+    "gobuster": {
+        definition: `🔥 Gobuster - Web Directory/Subdomain Bruteforcing Tool
+
+🔹 BASIC USAGE
+\`gobuster [mode] [flags]\`
+
+🔹 MODES:
+1. Directory Bruteforce (\`dir\`)
+2. DNS Subdomain Bruteforce (\`dns\`)
+3. Virtual Host Bruteforce (\`vhost\`)
+
+🔹 DIR MODE (Directory Bruteforcing)
+\`gobuster dir -u http://example.com -w wordlist.txt\`
+Flags:
+- \`-u\` : Target URL
+- \`-w\` : Wordlist path
+- \`-x\` : File extensions (e.g., \`-x php,html\`)
+- \`-t\` : Threads (default: 10)
+- \`-o\` : Output file
+- \`-s\` : Positive status codes (e.g., \`-s 200,204\`)
+- \`-b\` : Blacklist status codes (e.g., \`-b 404\`)
+- \`-k\` : Skip SSL verification
+- \`-r\` : Follow redirects
+
+🔹 DNS MODE (Subdomain Bruteforcing)
+\`gobuster dns -d example.com -w subdomains.txt\`
+Flags:
+- \`-d\` : Target domain
+- \`-w\` : Subdomain wordlist
+- \`-i\` : Show IP addresses
+- \`-r\` : Custom DNS resolver (e.g., \`-r 8.8.8.8\`)
+
+🔹 VHOST MODE (Virtual Host Bruteforcing)
+\`gobuster vhost -u http://example.com -w vhosts.txt\`
+Flags:
+- \`-u\` : Base URL
+- \`-w\` : Vhost wordlist
+- \`-r\` : Follow redirects
+
+🔹 COMMON WORDLISTS
+- Directories: \`/usr/share/wordlists/dirb/common.txt\`
+- Subdomains: \`/usr/share/wordlists/subdomains-top1million.txt\`
+- VHosts: \`/usr/share/wordlists/vhosts.txt\`
+
+⚠ TIP: Combine with \`-q\` for quiet mode or \`-n\` for no color output.`,
+        related: ["ethical hacking", "nmap", "phases of hacking"]
     }
 };
 
@@ -368,6 +415,7 @@ function processInput(input) {
 - AWS Security (IAM, best practices)
 - Windows Security (SAM file, password cracking)
 - Nmap (port scanning techniques)
+- Gobuster (directory/subdomain brute-forcing)
 
 Try asking about any of these topics or use the quick replies below!`;
     }
@@ -392,6 +440,7 @@ Try asking about any of these topics or use the quick replies below!`;
 - AWS security best practices
 - Windows security (SAM file)
 - Nmap scanning commands
+- Gobuster brute-forcing
 
 Or type 'help' for more options.`;
 }
